@@ -1,66 +1,24 @@
-## Foundry
+Image URIs:
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+happymood svg:
 
-Foundry consists of:
+data:image/svg+xml;base64,
+PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIw
+MDAvc3ZnIj4KICA8IS0tIEZhY2UgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDAi
+IGZpbGw9IiNGRkQ3MDAiIC8+CiAgCiAgPCEtLSBFeWVzIC0tPgogIDxjaXJjbGUgY3g9IjM1IiBj
+eT0iNDAiIHI9IjUiIGZpbGw9IiMwMDAiIC8+CiAgPGNpcmNsZSBjeD0iNjUiIGN5PSI0MCIgcj0i
+NSIgZmlsbD0iIzAwMCIgLz4KICAKICA8IS0tIFNtaWxlIC0tPgogIDxwYXRoIGQ9Ik0zNSw2MCBR
+NTAsNzUgNjUsNjAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiAv
+Pgo8L3N2Zz4K
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
+sadmood svg:
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+data:image/svg+xml;base64,
+PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIw
+MDAvc3ZnIj4KICA8IS0tIEZhY2UgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDAi
+IGZpbGw9IiM4N0NFRUIiIC8+CiAgCiAgPCEtLSBFeWVzIC0tPgogIDxjaXJjbGUgY3g9IjM1IiBj
+eT0iNDAiIHI9IjUiIGZpbGw9IiMwMDAiIC8+CiAgPGNpcmNsZSBjeD0iNjUiIGN5PSI0MCIgcj0i
+NSIgZmlsbD0iIzAwMCIgLz4KICAKICA8IS0tIFNhZCBNb3V0aCAtLT4KICA8cGF0aCBkPSJNMzUs
+NjUgUTUwLDUwIDY1LDY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9u
+ZSIgLz4KPC9zdmc+Cg==
