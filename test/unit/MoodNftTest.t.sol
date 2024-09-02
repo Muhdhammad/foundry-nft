@@ -16,7 +16,7 @@ contract MoodNftTest is Test {
         moodNft = new MoodNft(SAD_IMG_URI, HAPPY_IMG_URL);
     }
 
-    function testTokenURI() public {
+    function testViewTokenURI() public {
         vm.prank(USER);
         moodNft.mint();
         console.log(moodNft.tokenURI(0));

@@ -34,14 +34,23 @@ contract MoodNft is ERC721 {
     }
 
     function flipMood(uint256 tokenID) public {
+    // Check if the caller is approved or the owner of the token
         if (!_isApprovedOrOwner(msg.sender, tokenID)) {
             revert MoodNft__CantFlipMoodNotOwner();
         }
+
+    // Flip the mood
         if (s_tokenIdToMood[tokenID] == Mood.happy) {
-            s_tokenIdToMood[tokenID] == Mood.sad;
+            s_tokenIdToMood[tokenID] = Mood.sad;
         } else {
-            s_tokenIdToMood[tokenID] == Mood.happy;
+            s_tokenIdToMood[tokenID] = Mood.happy;
         }
+    }
+
+
+    function _isApprovedOrOwner(address spender, uint256 tokenID) internal view returns (bool) {
+        address owner = ownerOf(tokenID);
+        return (spender == owner || isApprovedForAll(owner, spender) || getApproved(tokenID) == spender);
     }
 
     function _baseURI() internal pure override returns (string memory) {
@@ -49,7 +58,6 @@ contract MoodNft is ERC721 {
     }
 
     function tokenURI(uint256 tokenID) public view override returns (string memory) {
-        uint256 tokenID;
         string memory imageURI;
         if (s_tokenIdToMood[tokenID] == Mood.happy) {
             imageURI = s_happySvgImageUri;
