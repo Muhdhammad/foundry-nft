@@ -35,7 +35,7 @@ contract MoodNft is ERC721 {
 
     function flipMood(uint256 tokenID) public {
     // Check if the caller is approved or the owner of the token
-        if (!_isApprovedOrOwner(msg.sender, tokenID)) {
+        if(!_isAuthorized(_ownerOf(tokenID), msg.sender, tokenID)){
             revert MoodNft__CantFlipMoodNotOwner();
         }
 
@@ -47,11 +47,6 @@ contract MoodNft is ERC721 {
         }
     }
 
-
-    function _isApprovedOrOwner(address spender, uint256 tokenID) internal view returns (bool) {
-        address owner = ownerOf(tokenID);
-        return (spender == owner || isApprovedForAll(owner, spender) || getApproved(tokenID) == spender);
-    }
 
     function _baseURI() internal pure override returns (string memory) {
         return "data:application/json;base64,";
