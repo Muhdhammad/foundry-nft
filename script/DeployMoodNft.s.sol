@@ -8,17 +8,12 @@ import "forge-std/console2.sol";
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 
 contract DeployMoodNft is Script {
-
-    function run() external returns(MoodNft) {
+    function run() external returns (MoodNft) {
         string memory sadSvg = vm.readFile("./img/sadmood.svg");
         string memory happySvg = vm.readFile("./img/happymood.svg");
 
-
         vm.startBroadcast();
-        MoodNft moodNft = new MoodNft(
-            svgToImageURI(sadSvg),
-            svgToImageURI(happySvg)
-        );
+        MoodNft moodNft = new MoodNft(svgToImageURI(sadSvg), svgToImageURI(happySvg));
         vm.stopBroadcast();
         return moodNft;
     }
